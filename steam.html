@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo(a) ao Steam</title>
+    <style type="text/css">
+        html{
+        margin: 0px;
+        overflow-x: hidden;
+        color: rgb(187, 184, 184);
+        background-color: rgb(36, 33, 46);
+        height: auto;
+        
+        }
+        .cabeçalho{
+            background-color: rgb(36, 33, 46);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .img{
+            width: 200px;
+            transform: translateX(200px);
+            
+        }
+        .opçoes1{
+            display: flex;
+            color: rgb(187, 184, 184);
+            transform: translateX(220px) translateY(5px);
+        }
+        .loja{
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+            
+        }
+        .loja:hover{
+            color: white;
+        }
+        .comunidade{
+            transform: translateX(20px);
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+        }
+        .comunidade:hover{
+            color: white;
+        }
+        .sobre{
+            transform: translateX(40px);
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+        }
+        .sobre:hover{
+            color: white;
+        }
+        .suporte{
+            transform: translateX(60px);
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+        }
+        .suporte:hover{
+            color: white;
+        }
+        
+        
+        .icone{
+            height: 12px;
+            width: 20px;
+            
+        }
+        .botao{
+            height: 25px;
+            width: 130px;
+            background-color: rgb(50, 168, 50);
+            
+            
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            font-size: 11px;
+            color: rgb(187, 184, 184);
+            border: 2px solid rgb(50, 168, 50);
+            
+            
+        }
+        
+            
+        
+        .opçoes2{
+            display: flex;
+            transform: translateX(350px) translateY(-30px);
+            align-items: center;
+            
+        }
+        .barra{height: 13px;
+        
+        border: 1px solid rgb(187, 184, 184);
+        transform: translateX(30px);
+        }
+        .icone2{
+         width: 15px;
+         height: 15px;
+        }
+        .iniciar{
+            transform: translateX(20px);
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+        }
+        .iniciar:hover{
+            color: white;
+        }
+        .idioma{
+            transform: translateX(40px);
+            text-decoration: none;
+            color: rgb(187, 184, 184);
+            
+        }
+        .idioma:hover{
+            color: white;
+        }
+        .fundotodo{
+            background-image: url(https://th.bing.com/th/id/R.70c8fb9337bd4ef9e68b7b69e8426b41?rik=E7iZQGPEt0dJeQ&pid=ImgRaw&r=0);
+           height: 450px;
+           width: 1300px;
+           background-repeat: no-repeat;
+           object-fit: cover;
+           background-position: center;
+           transform: translateY(-16px);
+
+        }
+        #slide{
+            width: 200px;
+           height: 300;
+            max-height: 150px;
+            max-width: 500px;
+            position: relative;
+            transform: translateX(450px) translateY(25px);
+        }
+        #slide img{
+            position: absolute;
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 800ms;
+            border: 4px solid blue;
+        }
+        #slide img.selecionado{
+            opacity: 1;
+        }
+        
+        
+.opçoes3{
+    display: flex;
+    position: absolute;
+    border: 1px solid rgb(39, 89, 196);
+    width: 900px;
+    height: 35px;
+    background-color: rgb(39, 89, 196);
+    opacity: 80%;
+    transform: translateX(300px) translateY(50px);
+    align-items: center;
+}
+.p1{
+    transform: translateX(10px);
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+.p1:hover{
+    color: white;
+    font-size: 20px;
+    
+}
+.p2{
+    transform: translateX(30px);
+    text-decoration: none;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(218, 214, 214);
+}
+.p2:hover{
+    color: white;
+    font-size: 20px;
+}
+.p3{
+    transform: translateX(40px);
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p3:hover{
+    color: white;
+    font-size: 20px;
+}
+.p4{
+    transform: translateX(50px);
+    color: rgb(218, 214, 214);
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p4:hover{
+    color: white;
+    font-size: 20px;
+}
+.p5{
+    transform: translateX(60px);
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p5:hover{
+    color: white;
+    font-size: 20px;
+}
+.p6{
+    transform: translateX(70px);
+    text-decoration: none;
+    color: rgb(218, 214, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.p6:hover{
+    color: white;
+    font-size: 20px;
+}
+.busca{
+    transform: translateX(180px);
+    height: 30px;
+    background-color: rgb(38, 96, 161);
+    
+    
+    
+}
+.icone3{
+    height: 30px;
+    width: 50px;
+    position: absolute;
+    transform: translateX(840px);
+    background-color: rgb(31, 81, 173);
+    border: 2px solid rgb(12, 12, 68);
+    
+}
+.play{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    
+}
+.texto{
+    display: flex;
+    transform: translateX(800px) translateY(150px);
+}
+.playstation{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translateX(-240px) translateY(30px);
+}
+.promoçao{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transform: translateX(20px);
+}
+.desconto{
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(43, 100, 224);
+    font-size: 35px;
+    transform: translateY(80px);
+}
+.complexo{
+    display: flex;
+    transform: translateY(400px);
+    position: absolute;
+    
+}
+.top{height: 120px;
+width: 90px;
+object-fit: cover;
+transform: translateX(103px);
+}
+.linhazinha{
+    width: 160px;
+    border: 2px solid rgb(12, 12, 68);
+    height: 0px;
+    transform: translateX(-25px) translateY(120px);
+}
+.steam:hover{
+    color: white;
+
+}
+.op{
+    text-decoration: none;
+    color: rgb(66, 184, 231);
+    
+    font-size: 14px;
+}
+.op:hover{
+    color: white;
+    
+}
+.textos{
+    transform: translateX(-190px) translateY(130px);
+    align-items: center;
+    display: block;
+    
+    
+}
+.icons{
+    height: 15px;
+    width: 15px;
+    border: 3px solid rgb(46, 112, 233);
+    background-color: rgb(46, 112, 233);
+    transform: translateX(-10px) translateY(5px);
+    
+}
+.img1{
+    height: 300px;
+    width: 450px;
+    object-fit: cover;
+    margin: 10px;
+    
+}
+.mirroredge{
+    height: 380px;
+    border: 1px solid black;
+    width: 800px;
+    transform: translateX(350px) translateY(400px);
+    background-color: rgb(12, 12, 68);
+    box-shadow: 5px 5px 5px black;
+
+}
+#nomedojogo{
+    transform: translateX(480px) translateY(-330px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.nomedojogo:hover{
+    color: white;
+}
+#img2{
+    height: 70px;
+    width: 150px;
+}
+#img3{
+    height: 70px;
+    width: 150px;
+}
+#img4{
+    height: 70px;
+    width: 150px;
+}
+#img5{
+    height: 70px;
+    width: 150px;
+}
+.bloco{
+    transform: translateX(480px) translateY(-350px);
+}
+.game{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+text-decoration: none;
+color: rgb(187, 184, 184);
+} 
+.game:hover{
+    color: white;
+}
+.botao2{
+    height: 20px;
+    width: 70px;
+    background-color: gray;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popular{
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#gratuito{
+    transform: translateY(5px);
+}
+.destaques{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    transform: translateX(10px);
+}
+#videoo{
+    width: 450px;
+    transform: translateX(10px) translateY(-5px);
+    box-shadow: 2px 2px 2px black;
+}
+.proximo{
+    transform: translateX(545px) translateY(400px);
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    box-shadow: 5px 5px 5px black ;
+    
+    
+}
+.proximo:hover{
+    color:rgb(255, 255, 255);
+    font-size: 15px;
+    background-color: rgb(10, 30, 119);
+    height: 22px;
+    width: 22px;
+
+}
+.box{
+    display: flex;
+    transform: translateX(350px) translateY(480px);
+}
+.box1{
+    height: 300px;
+    width: 250px;
+    border: 2px solid black;
+    background-color: rgb(27, 96, 141);
+    
+}
+.box2{
+    height: 300px;
+    width: 250px;
+    border: 2px solid black;
+    background-color: rgb(27, 96, 141);
+    margin-left: 5px;
+}
+.box3{
+    height: 145px;
+    width: 250px;
+    border: 2px solid black;
+    background-color: rgb(27, 96, 141);
+    margin-left: 5px;
+}
+.box4{
+
+    height: 145px;
+    width: 250px;
+    border: 2px solid black;
+    background-color: rgb(27, 96, 141);
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.boxes{
+    display: block;
+}
+.ofertas{
+    position: absolute;
+    transform: translateY(-50px);
+    font-size: 20px;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.b1{
+    height: 50px;
+    background-color: rgb(99, 96, 96);
+    transform: translateY(130px);
+}
+.b1:hover{
+    background-color: rgb(136, 133, 133);
+    color: white;
+    font-size: 15px;
+}
+.b2{
+    height: 50px;
+    background-color: rgb(99, 96, 96);
+    transform:translateX(1145px) translateY(300px);
+}
+.b2:hover{
+    background-color: rgb(136, 133, 133);
+    color: white;
+    font-size: 15px;
+}
+.godofwar4{
+    height: 180px;
+    width: 248px;
+    object-fit: cover;
+    border: 1px solid black;
+    margin: 0px;
+    box-shadow: 2px 2px 2px black;
+}
+.oferta1{
+    transform: translateY(-20px);
+margin-left: 5px;
+color: white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.oferta2{
+    
+   transform: translateY(-40px);
+    color: rgb(108, 152, 233);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+.descontao{
+    height: 30px;
+    width: 80px;
+    background-color: rgb(39, 131, 17);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(60, 216, 60);
+    transform: translateX(5px) translateY(-30px);
+}
+.eagames{
+    height: 145px;
+    width: 250px;
+}
+.azul{
+    height: 30px;
+    width: 250px;
+    background-color: rgb(27, 96, 141);
+    position: absolute;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transform: translateY(-35px);
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.euro{
+    margin-left: 5px;
+}
+.botoes{
+    display: flex;
+    
+}
+.categoriagame{
+    display: flex;
+    position: absolute;
+    transform: translateX(370px) translateY(900px);
+    
+}
+.categoria1{
+    height: 150px;
+    width: 180px;
+    margin-right: 10px;
+    border: 2px solid rgb(8, 117, 206);
+}
+.categoria1:hover{
+    height: 180px;
+    width: 210px;
+    transform: translateX(-10px);
+    border: 3px solid rgb(0, 217, 255);
+}
+.categoria2{
+    height: 150px;
+    width: 180px;
+    margin-right: 10px;
+    border: 2px solid rgb(71, 71, 71);
+}
+.categoria2:hover{
+    height: 180px;
+    width: 210px;
+    transform: translateX(-5px);
+    border: 3px solid rgb(128, 126, 126);
+}
+.categoria3{
+    height: 150px;
+    width: 180px;
+    margin-right: 10px;
+    border: 2px solid rgb(153, 153, 4);
+}
+.categoria3:hover{
+    height: 180px;
+    width: 210px;
+    transform: translateX(-5px);
+    border: 3px solid rgb(247, 247, 52);
+}
+
+.categoria4{
+    height: 150px;
+    width: 180px;
+    border: 2px solid rgb(5, 90, 5);
+}
+.categoria4:hover{
+    height: 180px;
+    width: 210px;
+    border: 3px solid rgb(4, 170, 4);
+   
+    
+}
+.botao10{
+    height: 50px;
+    background: linear-gradient(gray, rgb(58, 57, 57));
+    border: 0ch;
+    transform: translateY(55px);
+}
+.botao11{
+    text-decoration: none;
+    color: white;
+}
+.motaa{
+    position: absolute;
+    transform: translateY(-50px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.swordigo{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    
+}
+.aventura{
+    transform: translateX(50px) translateY(-60px);
+    text-shadow: 2px 2px 2px black;
+}
+.outlast{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.terror{
+    transform: translateX(60px) translateY(-60px);
+    text-shadow: 2px 2px 2px black;
+}
+.justcause{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.mundoaberto{
+    transform: translateX(25px) translateY(-60px);
+    text-shadow: 2px 2px 2px black;
+}
+.ufc{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+.luta{
+    transform: translateX(70px) translateY(-60px);
+    text-shadow: 2px 2px 2px black;
+}
+.fazerlogin{
+    height: 150px;
+    width: 800px;
+    display: block;
+    position: absolute;
+    background-color: rgb(19, 19, 44);
+    transform: translateY(200px);
+    
+}
+.gta1{
+transform: translateX(200px);
+}
+.gta2{
+transform: translateX(270px);
+}
+.gta3{
+    background: linear-gradient(rgb(26, 133, 26), rgb(54, 202, 54), rgb(26, 133, 26));
+    border: 0ch;
+    height: 30px;
+    width: 100px;
+    transform: translateX(340px);
+    
+    
+}
+.gta4{
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+.gta3:hover{
+   background: linear-gradient(rgb(90, 221, 90), rgb(93, 241, 93), rgb(90, 211, 90));
+   height: 32px;
+   width: 102px;
+}
+.gta4:hover{
+    font-size: 14 ;
+}
+.gta5{
+    text-decoration: none;
+    color: white;
+}
+.gta5:hover{
+    color: rgb(40, 185, 221);
+}
+.navegar{
+ position: absolute;
+ transform: translateY(400px);
+}
+.opt{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.opts{
+    display: flex;
+    
+}
+.opt1{
+  
+  background: linear-gradient(90deg, rgb(0, 204, 255), rgb(5, 114, 141));
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.apt1{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.opt2{
+    background: linear-gradient(90deg, rgb(0, 204, 255), rgb(5, 114, 141));
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.apt2{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.opt3{
+    background: linear-gradient(90deg, rgb(0, 204, 255), rgb(5, 114, 141));
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.apt3{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+.opt4{
+    background: linear-gradient(90deg, rgb(0, 204, 255), rgb(5, 114, 141));
+  height: 60px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.apt4{
+    text-decoration: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+</style>
+</head>
+<header class="cabeçalho">
+    <div class="titulo"><img class="img" src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016" alt=""></div>
+    <div class="opçoes1">
+        <a href="" class="loja">LOJA</a>
+        <a href="" class="comunidade">COMUNIDADE</a>
+        <a href="" class="sobre">SOBRE</a>
+        <a href="" class="suporte">SUPORTE</a>
+            
+    </div>
+ <div class="opçoes2">
+    <button class="botao"><img class="icone" src="download.svg" alt=""><p class="steam">instalar o Steam</p></button>
+    <a href="" class="iniciar">iniciar sessão</a>
+    <div class="barra"></div>
+    <a href="" class="idioma">idioma<img class="icone2" src="angle-small-down.svg"></a>
+</div>
+</header>
+<body>
+  <div class="fundotodo">
+    <div id="slide">
+        <img class="selecionado" src="https://th.bing.com/th/id/R.f8e43bc3546087ea54db2dbd201815a1?rik=eTslKLxHvV64RQ&pid=ImgRaw&r=0" alt="">
+        <img  src="https://th.bing.com/th/id/OIP.XVSkpIziHR84ZKsv2FAt7wHaFj?pid=ImgDet&w=480&h=360&rs=1">
+        <img src="https://th.bing.com/th/id/R.cdb5141cae70e479f6fc6d4cc3c1735e?rik=Yfw6Tn2OXSANjg&pid=ImgRaw&r=0" alt="">
+        <img src="outlast.jpg" alt="">
+  </div>
+  <div class="opçoes3">
+    <a href="" class="p1"><strong>Sua loja</strong></a>
+    <a href="" class="p2"><strong>Novidades e tendências</strong></a>
+    <a href="" class="p3"><strong>Categorias</strong></a>
+    <a href="" class="p4"><strong>Loja de ponto</strong></a>
+    <a href="" class="p5"><strong>Notícias</strong></a>
+    <a href="" class="p6"><strong>Laboratório</strong></a>
+    <input type="search" placeholder="Buscar" class="busca">
+    <img src="search.svg" class="icone3">
+</div>
+<div class="texto">
+<img class="play" src="https://th.bing.com/th/id/R.951a7cd0806059c69e5f9d6180e41bc9?rik=85XDDnudaz7JIA&riu=http%3a%2f%2flogo-sign.com%2flogos%2fPlaystation-logo.jpg&ehk=zTohawo7ffdA2O1Ze2IYKsTsVr8i0BphDss1%2bUGF5bk%3d&risl=&pid=ImgRaw&r=0">
+<h3 class="promoçao">PROMOÇÃO DA DISTRIBUIDORA</h3><H2 class="playstation">PLAYSTATION</H2><h2 class="desconto">ATÉ 75% DE DESCONTO</h2>
+</div> 
+<div class="complexo">
+    <img class="top" src="https://th.bing.com/th/id/OIP.X3aBKEre05CfIFtriqUu9AHaKZ?pid=ImgDet&w=700&h=983&rs=1">
+    <span class="linhazinha"></span>
+<div class="textos">
+    <p>VALES-PRESENTE</p>
+    <a href="" class="op" ><strong>Já disponivel no Steam</strong></a>
+    <p>RECOMENDADO</p>
+    <img src="users.svg" alt="" class="icons"><a class="op" href=""><strong>Por amigos</strong></a><p></p>
+    <img src="globe.svg" alt="" class="icons"><a class="op" href=""><strong>Por curadores</strong></a><p></p>
+    <img src="book-alt.svg" alt="" class="icons"><a class="op" href=""><strong>Marcadores</strong></a><p></p>
+    <p>LISTA DE DESCOBRIMENTO</p>
+    <img src="apps.svg" alt="" class="icons"><a class="op" href=""><strong>Recomendações</strong></a><p></p>
+    <img src="apps (1).svg" alt="" class="icons"><a class="op" href=""><strong>Lançamentos</strong></a><p></p>
+    <p>VER CATEGORIAS</p>
+    <img src="stats.svg" alt="" class="icons"><a class="op" href=""><strong>Mais vendidos</strong></a><p></p>
+    <img src="plus.svg" alt="" class="icons"><a class="op" href=""><strong>Lançamentos</strong></a><p></p>
+    <img src="time-past.svg" alt="" class="icons"><a class="op" href=""><strong>Em breve</strong></a><p></p>
+    <img src="chart-histogram.svg" alt="" class="icons"><a class="op" href=""><strong>Ofertas</strong></a><p></p>
+    <img src="glasses.svg" alt="" class="icons"><a class="op" href=""><strong>Titulos de RV</strong></a><p></p>
+    <img src="puzzle-piece.svg" alt="" class="icons"><a class="op" href=""><strong>Compatíveis com Controle</strong></a><p></p>
+    <p>NAVEGAR POR GÊNERO</p>
+    <a href="" class="op">Gratuito p/ Jogar</a><br>
+    <a class="op" href="">Acesso Antecipado</a><br>
+    <a class="op" href="">Aventura</a><br>
+    <a class="op" href="">Ação</a><br>
+    <a class="op" href="">Casual</a><br>
+    <a class="op" href="">Corrida</a><br>
+    <a class="op" href="">Esportes</a><br>
+    <a class="op" href="">Estratégias</a><br>
+    <a class="op" href="">Indie</a><br>
+    <a class="op" href="">Multijogador Massivo</a><br>
+    <a class="op" href="">RPG</a><br>
+    <a class="op" href="">Simulação</a><br>
+    
+</div>
+</div>
+
+<div class="mirroredge">
+    <p class="destaques"><strong>Destaques e Recomendados</strong></p>
+    <video controls id="videoo" width="450" height="300px"poster="" loop>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+     <h2 id="nomedojogo"><strong>MIRROR'S EDGE</strong></h2>
+     <div class="bloco">
+     <img id="img2"src="rr.jpg">
+     <img id="img3" src="rr2.png">
+    </div>
+     <div class="bloco">
+        <img id="img4" src="rr3.jpg" alt="">
+        <img id="img5" src="rrrr.jpg">
+        <h3><a href=""  class="game">Já disponível</a></h3>
+        <button class="botao2"><a class="popular" href="">Popular</a></button>
+        <a class="op" href=""><p id="gratuito">Gratuito p/ Jogar</p></a>
+    </div>
+    </div>
+    <div class="botoes">
+    <button class="proximo" onclick="motaaa(),começarrr(),motaaa1(),motaaa2(),motaaa3(),motaaa4(),motaaa5()">1</button>
+    <button class="proximo" onclick="mota(),começar(),mota1(),mota2(),mota3(),mota4(),mota5()">2</button>
+    <button class="proximo" onclick="motaa(),começarr(),motaa1(),motaa2(),motaa3(),motaa4(),motaa5()">3</button>
+    <button class="proximo" onclick="motaaaa(),começarrrr(),motaaaa1(),motaaaa2(),motaaaa3(),motaaaa4(),motaaaa5()">4</button>
+    </div>
+    <div class="box">
+        <p class="ofertas"><strong>OFERTAS ESPECIAIS</strong></p>
+        <button class="b1" onclick="troca(),troca1(),troca2(),troca3(),troca4(),troca5(),troca6(),troca7(),boxes1(),boxes2(),boxes3(),boxes4()"><</button>
+        <div class="box1">
+           <a href=""><img id="box1" class="godofwar4"  src="godofwar4.jpg"></a>
+           <h3 class="oferta1" id="name1">OFERTA DO DIA</h3>
+           <p class="oferta2" id="name2">Oferta válida até 29 de set. às 14:00.</p>
+           <div class="descontao"><strong id="name3">Até -90%</strong></div>
+        </div>
+        <div class="box2">
+            <a href=""><img class="godofwar4" id="box2"  src="goatsimulator.jpg"></a>
+            <h3 class="oferta1" id="name4">FIM DE SEMANA GRATUITO</h3>
+            <p class="oferta2" id="name5">Oferta válida até 08 de out. às 17:00.</p>
+            <div class="descontao"><strong id="name6">Até -50%</strong></div>
+        </div>
+    <div class="boxes">
+        <div class="box3">
+       <a href=""><img class="eagames" id="box3" src="eagames.jpg" alt=""><div class="azul"><strong class="euro" id="name7">DIA DA SESSÃO EA GAMES</strong></div></a>
+        </div>
+        <div class="box4">
+            <a href=""><img class="eagames" id="box4" src="eurotruck.jpg" alt=""><div class="azul"><strong id="name8" class="euro">EURO TRUCK SIMULATOR</strong></div></a>
+        </div>
+        </div>
+    </div>
+    <button class="b2" onclick="box1(),box2(),box3(),box4(),trocanomes(),trocanomes1(),trocanomes2(),trocanomes3(),trocanomes4(),trocanomes5(),trocanomes6(),trocanomes7()">></button>
+    </div>
+    
+    <div class="categoriagame">
+        <h3 class="motaa">
+            EXPLORE POR CATEGORIAS E MAIS
+        </h3>
+        <button class="botao10">
+            <a href="" class="botao11"><</a>
+        </button>
+         <div ><a href=""  class="swordigo"><img src="swordigo.jpg" class="categoria1" alt=""><h3 class="aventura">AVENTURA</h3></a></div>
+         <div ><a href="" class="outlast"><img src="outlast.jpg" class="categoria2" alt=""><h3 class="terror">TERROR</h3></a></div>
+         <div ><a href="" class="justcause"><img src="justcause.jpg" class="categoria3" alt=""><h3 class="mundoaberto">MUNDO ABERTO</h3></a></div>
+         <div ><a href="" class="ufc"><img src="ufc.jpg" class="categoria4" alt=""><h3 class="luta">LUTA</h3></a></div>
+         
+        
+        <button class="botao10">
+            <a href="" class="botao11">></a>
+        </button>
+    
+<div class="fazerlogin">
+    <p class="gta1">inicie a sessão para ver mais recomendações personalizadas</p>
+    <button class="gta3"><a href="" class="gta4"><strong>INICIAR SESSÃO</strong></a></button>
+    <p class="gta2">Ou <a href="" class="gta5">cadastre-se</a> no Steam gratuitamente</p>
+</div>
+
+<div class="navegar">
+    <H3 class="opt">NAVEGAR PELO STEAM</H3>
+    <div class="opts">
+    <div class="opt1"><a class="apt1" href=""><strong>LANÇAMENTOS</strong></a></div>
+    <div class="opt2"><a class="apt2" href=""><strong>OFERTAS</strong></a></div>
+    <div class="opt3"><a class="apt3" href=""><strong>JOGOS GRATUITO</strong></a></div>
+    <div class="opt4"><a class="apt4" href=""><strong>MARCADORES</strong></a></div>
+    </div>
+</div>
+
+<script src="steam.js"></script>
+</body>
+</html>
